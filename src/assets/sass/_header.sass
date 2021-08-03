@@ -1,0 +1,25 @@
+// header
+.header
+	margin: 35px 0
+	+openAnimation
+
+	&-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&-logo
+		&__img
+			width: 275px
+			user-select: none
+
+	&-menu
+		&__link
+			margin-left: 35px
+			+transition
+
+			&:hover
+				color: $red
+
+			&.active
+				color: $red

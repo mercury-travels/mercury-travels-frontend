@@ -1,0 +1,105 @@
+// interface
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+body
+	position: relative
+	font-size: 18px
+	overflow-x: hidden
+	overflow-y: scroll
+	+light
+
+// link
+a
+	text-decoration: none
+	color: $black
+
+// title
+h1,h2,h3,h4,h5,h6
+	+bold
+
+.title
+	font-size: 120px
+
+// p
+p
+	line-height: 1.4em
+
+// subtitle
+.subtitle
+	display: block
+	font-size: 32px
+	color: $gray
+
+// description
+.description
+	font-size: 32px
+
+// container
+.container
+	width: 95%
+	margin: 0 auto
+
+// btn
+.btn
+	cursor: pointer
+	border: none
+	background-color: transparent
+	display: flex
+	align-items: center
+	font-size: 24px
+	color: $red
+	+light
+
+	& svg
+		margin-left: 10px
+		+transition
+
+	&:hover svg
+		transform: rotate(45deg)
+
+// input
+.input
+	width: 100%
+	position: relative
+
+	&__field
+		resize: none
+		outline: none
+		font-size: 24px
+		padding: 15px 0
+		display: block
+		width: 100%
+		border: none
+		border-bottom: 1px solid $gray
+		line-height: 1.4em
+		+light
+		+transition
+
+		&:focus ~ label,
+		&:valid ~ label
+			top: -15px
+			font-size: 18px
+
+		&.error
+			border-bottom: 1px solid $red
+
+	&__label
+		color: $gray
+		font-size: 21px
+		position: absolute
+		pointer-events: none
+		top: 10px
+		+transition
+
+		&.error
+			color: $red
+
+	&__error
+		display: block
+		margin-top: 10px
+		font-size: 15px
+		color: $red
+		+transition

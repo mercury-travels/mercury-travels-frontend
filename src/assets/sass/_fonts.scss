@@ -1,0 +1,32 @@
+// fonts
+@font-face {
+    font-family: "San Francisco Pro Display Bold";
+    src: url("../fonts/SFProDisplay-Bold.eot");
+    src: url("../fonts/SFProDisplay-Bold.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/SFProDisplay-Bold.woff") format("woff"),
+        url("../fonts/SFProDisplay-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "San Francisco Pro Display Light";
+    src: url("../fonts/SFProDisplay-Light.eot");
+    src: url("../fonts/SFProDisplay-Light.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/SFProDisplay-Light.woff") format("woff"),
+        url("../fonts/SFProDisplay-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin light {
+    font-family: "San Francisco Pro Display Light";
+    font-weight: 300;
+}
+
+@mixin bold {
+    font-family: "San Francisco Pro Display Bold";
+    font-weight: 700;
+}
