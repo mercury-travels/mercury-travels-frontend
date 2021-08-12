@@ -51,7 +51,7 @@ const Footer = () => {
                                     href="mailto:emma@mercurytravels.ru"
                                     className="footer__link"
                                 >
-                                    emma@mercurytravels.ru
+                                    emma@mercury-travels.ru
                                 </a>
                             </div>
                         </div>

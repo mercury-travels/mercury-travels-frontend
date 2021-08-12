@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import {API_DOMEN} from '../../config';
+import { API_DOMEN } from '../../config';
 
 export const sendContactus = (data) => (dispatch) => {
 	dispatch({
@@ -8,7 +8,13 @@ export const sendContactus = (data) => (dispatch) => {
 		payload: true
 	})
 
-	axios.post(`${API_DOMEN}/sendMail.php`, data).then(() => {
+	let formData = new FormData();
+
+	formData.append("email", data.email);
+	formData.append("name", data.name);
+	formData.append("wishes", data.wishes);
+
+	axios.post(`${API_DOMEN}/sendMail.php`, formData).then(() => {
 		dispatch({
 			type: "SET_CONTACTUS",
 			payload: "success"
